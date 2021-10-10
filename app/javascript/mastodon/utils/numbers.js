@@ -69,3 +69,13 @@ export function pluralReady(sourceNumber, division) {
 
   return Math.trunc(sourceNumber / closestScale) * closestScale;
 }
+
+/**
+ * @param {number} num
+ * @returns {number}
+ */
+export function roundTo10(num) {
+  const m = Math.pow(10, -1 | 0);
+
+  return Math.round(num * m) / m;
+}
